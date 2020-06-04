@@ -1,24 +1,35 @@
 $(document).ready(function () {
   //search for a city, view current weather conditions for that city
-  // presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
 
   const searchList = [];
-  const url =
-    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=6331b558a2d7fa66a892d8e22187e11a";
+  const apiKey = "6331b558a2d7fa66a892d8e22187e11a";
 
-  fetch(url)
-    .then(function (data) {
-      console.log(data);
-    })
-
-    .catch(function (error) {
-      console.log(error);
-    });
-
-  $(".search-bar").submit(function (event) {
+  $(".search-bar").submit(async function (event) {
     event.preventDefault();
     var userInput = $("#user-input").val();
-    console.log("hello??");
+    console.log(userInput);
+
+    const url =
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+      userInput +
+      "&appid=" +
+      apiKey;
+
+    try {
+      var response = await fetch(url);
+    } catch (error) {
+      throw Error("fetching weather api failed");
+    }
+    //   .then(function (data) {
+    //     console.log(data);
+    //   })
+
+    //   .catch(function (error) {
+    //     console.log(error);
+    //   });
+
+    //variables from the data
+    // presented with the city name, the date, the temperature, the humidity, the wind speed, and the UV index; an icon representation of weather conditions
   });
 });
 
