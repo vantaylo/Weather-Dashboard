@@ -1,6 +1,11 @@
 $(document).ready(function () {
   //search for a city, view current weather conditions for that city
 
+  const getWeather = async function (url) {
+    let response = await fetch(url);
+    return response.json();
+  };
+
   const searchList = [];
   const apiKey = "6331b558a2d7fa66a892d8e22187e11a";
 
@@ -15,11 +20,15 @@ $(document).ready(function () {
       "&appid=" +
       apiKey;
 
-    try {
-      var response = await fetch(url);
-    } catch (error) {
-      throw Error("fetching weather api failed");
-    }
+    let weatherData = await getWeather(url);
+    console.log(weatherData);
+
+    // try {
+    //   var response = await fetch(url);
+    //   var data = await response.json();
+    // } catch (error) {
+    //   throw Error("fetching weather api failed");
+    //
     //   .then(function (data) {
     //     console.log(data);
     //   })
@@ -29,6 +38,7 @@ $(document).ready(function () {
     //   });
 
     //variables from the data
+
     // presented with the city name, the date, the temperature, the humidity, the wind speed, and the UV index; an icon representation of weather conditions
   });
 });
