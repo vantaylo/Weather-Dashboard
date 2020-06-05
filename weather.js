@@ -38,6 +38,15 @@ $(document).ready(function () {
     //   });
 
     //variables from the data
+    var cityName = weatherData.name;
+    console.log(cityName);
+
+    var temperatureKelvin = weatherData.main.temp;
+    var tempConverted = ((temperatureKelvin - 273.15) * 9) / 5 + 32;
+    var date = new Date();
+    var humidity = weatherData.main.humidity;
+    var windSpeed = weatherData.wind.speed;
+    // var uvIndex = ;
 
     // presented with the city name, the date, the temperature, the humidity, the wind speed, and the UV index; an icon representation of weather conditions
   });
