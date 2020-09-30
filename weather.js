@@ -10,6 +10,15 @@ var currentWSpeed = $("#wind-speed");
 var currentUvindex = $("#uv-index");
 var sCity = [];
 
+function find(c) {
+  for (var i = 0; i < sCity.length; i++) {
+    if (c.toUpperCase() === sCity[i]) {
+      return -1;
+    }
+  }
+  return 1;
+}
+
 var APIKey = "6331b558a2d7fa66a892d8e22187e11a";
 
 function currentWeather(city) {
@@ -100,4 +109,31 @@ function forecast(cityid) {
       $("#fHumidity" + i).html(humidity + "%");
     }
   });
+
+  function addToList(c) {
+    var listEl = $("<li>" + c.toUpperCase() + "</li>");
+    $(listEl).attr("class", "list-group-item");
+    $(listEl).attr("data-value", c.toUpperCase());
+    $(".list-group").append(listEl);
+  }
+  function invokePastSearch(event) {
+    var liEl = event.target;
+    if (event.target.matches("li")) {
+      city = liEl.textContent.trim();
+      currentWeather(city);
+    }
+  }
+}
+
+function loadlastCity() {
+  $("ul").empty();
+  var sCity = JSON.parse(localStorage.getItem("cityname"));
+  if (sCity !== null) {
+    sCity = JSON.parse(localStorage.getItem("cityname"));
+    for (i = 0; i < sCity.length; i++) {
+      addToList(sCity[i]);
+    }
+    city = sCity[i - 1];
+    currentWeather(city);
+  }
 }
