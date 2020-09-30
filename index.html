@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <title>Weather Dashboard</title>
-
-        <link rel="stylesheet" href="styles.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <!--Bootstrap CSS CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
   <body>
-    <div class="title">Weather Dashboard</div>
-
-   
-      <nav>
-        <div>
-          <form class="search-bar">
-            <div class="input-field">
-              <input id="user-input" type="text">
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            </div>
-          </form>
-          
-        </div>
-      </nav>
-
-      <div class="todays-weather"></div>
-      <div class="weekly-forcast"></div>
-      <div class="list-searches"></div>
-    </div>
-      
-    <script src=""></script>
-    <script src="Weather.js"></script>
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!--Code to Jvascript File-->
+    <script src="script.js"></script>
   </body>
 </html>
