@@ -1,7 +1,5 @@
 # Weather-Dashboard
 
-A weather dashboard using the OpenWeather API.
-
 ## Description
 
 Weather-Dashboard is an application to find a weather condition of a given city both the current and 5-Days forecast at the same time.
@@ -41,14 +39,6 @@ AS A traveler
 I WANT to see the weather outlook for multiple cities
 <br><br/>
 SO THAT I can plan a trip accordingly
-
-## Technology
-
-- CSS
-- HTML
-- JavaScript
-- API
-- Local Storage
 
 # Preview
 
