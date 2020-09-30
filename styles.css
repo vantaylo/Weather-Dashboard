@@ -1,12 +1,21 @@
-body {
-  background-color: white;
+* {
+  box-sizing: border-box;
 }
 
-.title {
-  background-color: white;
-  height: 50px;
-  text-align: center;
-  font-size: x-large;
-  font-weight: bolder;
-  margin-top: 10px;
+body {
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3 {
+  font-weight: bold;
+}
+.forecast {
+  font-size: 0.9em;
+}
+span {
+  font-size: 1em;
+}
+li:hover {
+  background-color: lightslategray;
+  text-decoration: underline;
 }
