@@ -42,4 +42,4 @@ SO THAT I can plan a trip accordingly
 
 # Preview
 
-![weather dashboard](DashboardScreenShot.png)
+![weather dashboard](WeatherDashboardDemo.gif)
