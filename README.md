@@ -35,7 +35,9 @@ If the user wants to see the past search city weather condition again, just clic
 ## User Story
 
 AS A traveler
+<br><br/>
 I WANT to see the weather outlook for multiple cities
+<br><br/>
 SO THAT I can plan a trip accordingly
 
 ## Technology
