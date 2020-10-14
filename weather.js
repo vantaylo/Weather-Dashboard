@@ -19,7 +19,7 @@ function find(c) {
   return 1;
 }
 
-var APIKey = "6331b558a2d7fa66a892d8e22187e11a";
+var APIKey = "4c2c010225487da8a91e48d238a4de9a";
 
 function displayWeather(event) {
   event.preventDefault();
@@ -30,7 +30,6 @@ function displayWeather(event) {
 }
 
 function currentWeather(city) {
-  console.log("print city: ", city);
 
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -42,7 +41,6 @@ function currentWeather(city) {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
 
     var weathericon = response.weather[0].icon;
 
@@ -73,7 +71,6 @@ function currentWeather(city) {
 
     if (response.cod == 200) {
       sCity = JSON.parse(localStorage.getItem("cityname"));
-      console.log(sCity);
 
       if (sCity == null) {
         sCity = [];
