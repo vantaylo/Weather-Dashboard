@@ -41,5 +41,6 @@ I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 
 # Preview
-
+![Deployed Link](https://weather-dashboard-app1.herokuapp.com/)
+-
 ![weather dashboard](WeatherDashboardDemo.gif)
