@@ -2,9 +2,9 @@
 
 ## Description
 
-Weather-Dashboard is an application to find a weather condition of a given city both the current and 5-Days forecast at the same time.
+An application to find the weather of a given city, both current and 5-Day forecast, with city search history saved.
 <br><br/>
-The server-side API used to get response data object is retrieved from the Open Weather APi.
+The server-side API used is from the Open Weather API.
 <br><br/>
 The current weather section is including the following weather characters and date.
 
